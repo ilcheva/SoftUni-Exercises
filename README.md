@@ -1,1 +1,1 @@
-# exercises-repo
+Projects for SoftUni
