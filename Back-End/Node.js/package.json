@@ -1,0 +1,16 @@
+{
+  "name": "cats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "formidable": "^1.2.2",
+    "nodemon": "^2.0.7"
+  }
+}
