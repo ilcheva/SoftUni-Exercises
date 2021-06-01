@@ -1,0 +1,5 @@
+table, td, th{
+    border: rgb(221, 221, 221);
+    border-width: 1px;
+    border-style: solid;
+}
