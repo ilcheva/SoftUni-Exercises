@@ -11,6 +11,14 @@ h1,h2,h3,h4,h5,h6{
 table ,td ,th {
     border: 1px solid rgb(221, 221, 221);
     border-collapse: collapse;  
+    table-layout: fixed;
+  width: 100%;
+}
+th,td,tr{
+
+    padding: 0.2rem;
+    border: 1px solid rgb(218, 224, 228);
+    text-align: left;
 }
 figure {
     border-left: 4px solid rgb(221, 221, 221);
