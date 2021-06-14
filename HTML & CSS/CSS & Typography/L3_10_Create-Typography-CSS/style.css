@@ -12,7 +12,7 @@ table ,td ,th {
     border: 1px solid rgb(221, 221, 221);
     border-collapse: collapse;  
     table-layout: fixed;
-  width: 100%;
+    width: 100%;
 }
 th,td,tr{
 
