@@ -1,0 +1,43 @@
+main {
+    max-width: 1400px;
+    margin: 50px auto;
+}
+.auto-content,
+.auto-image {
+    display: inline-block;
+    vertical-align: top;
+}
+.auto-content {
+    width: 50%;
+    margin-right: 50px;
+}
+.auto-image {
+    width: 40%;
+}
+.auto-image img {
+    width: 100%;
+}
+.auto-content-list {
+    padding-left: 0;
+}
+.auto-content-list-item {
+    list-style-type: none;
+}
+.auto-content-list-item-icon,
+.auto-content-list-item-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+.auto-content-list-item-icon {
+    max-width: 65px;
+}
+.auto-content-list-item-icon img {
+    width: 100%;
+}
+.auto-content-list-item-text h4,
+.auto-content-list-item-text p {
+    margin: 4px 0;
+}
+.auto-content h2 {
+    margin-top: 0;
+}

@@ -1,0 +1,27 @@
+.page-wrapper {
+    max-width: 850px;
+    margin: 50px auto;
+}
+.medium-header-title {
+    margin: 6px 0;
+}
+.medium-header-subtitle {
+    color: gray;
+    font-weight: 300;
+    margin-top: 6px;
+}
+.medium-content-cta,
+.medium-content-text {
+    display: inline-block;
+}
+.medium-content-text {
+    width: 58%;
+    margin-left: 15%;
+}
+.medium-content-text-title {
+    margin-bottom: 6px;
+}
+
+.medium-content-text-desc {
+    color: gray;
+}
