@@ -46,7 +46,7 @@ main {
 .login-form input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid gray;
     outline: none;
     padding: 0 15px 12px 68px;
 }
@@ -68,7 +68,7 @@ main {
 }
 i {
     font-size: 22px;
-    color: lightgray;
+    color: gray;
     position: relative;
     top: 25px;
     left: 18px;
