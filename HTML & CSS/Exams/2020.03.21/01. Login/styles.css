@@ -46,9 +46,9 @@ main {
 .login-form input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgray;
     outline: none;
-    padding: 0 15px 12px 50px;
+    padding: 0 15px 12px 68px;
 }
 .login-form::placeholder {
     font-size: 16px;
@@ -62,13 +62,13 @@ main {
     color: white;
     text-transform: uppercase;
     border-radius: 20px;
-    padding: 12px 30px;
+    padding: 12px 38px;
     font-weight: bold;
     border: none;
 }
 i {
     font-size: 22px;
-    color: gray;
+    color: lightgray;
     position: relative;
     top: 25px;
     left: 18px;
