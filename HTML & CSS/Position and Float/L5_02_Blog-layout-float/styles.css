@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+body {
+    background-color: #eeeeee;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    padding: 20px 130px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+p,
+blockquote,
+a {
+    font-size: 0.7em;
+}
+.site-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    font-weight: bold;
+}
+.site-header {
+    border-bottom: 2px solid black;
+}
+img {
+    padding: 5px;
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.25);
+}
+.quote,
+.blockquote-container-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 44%;
+}
+.quote {
+    font-family: Georgia, serif;
+    border-left: 3px solid lightgray;
+    padding-left: 20px;
+    font-style: italic;
+    color: #757171;
+}
+figcaption {
+    text-align: right;
+}
+
+.first-img {
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+main,
+aside {
+    display: inline-block;
+    vertical-align: top;
+}
+main {
+    width: 73%;
+    margin-right: 65px;
+}
+.third {
+    margin-top: 50px;
+}
+.second-img {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+aside li {
+    list-style: square;
+}
+aside a {
+    text-decoration: none;
+    color: #009d48;
+}
+blockquote{
+    font-family: Georgia, serif;
+}
