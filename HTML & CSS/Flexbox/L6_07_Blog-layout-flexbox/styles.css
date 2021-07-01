@@ -38,21 +38,10 @@ a {
 .site-title {
     font-size: 40px;
     text-transform: uppercase;
-    display: inline-block;
+
     font-weight: bold;
 }
-/* nav ul li {
-    display: inline-block;
-    padding: 10px;
-} */
-/* header li {
-    color: #009d00;
-    text-decoration: none;
-} */
-/* .navigation {
-    float: right;
-    margin-top: 30px;
-} */
+
 .site-header {
     flex-basis: 100%;
     border-bottom: 2px solid black;
@@ -97,14 +86,6 @@ main {
 aside {
     flex-direction: column;
 }
-.third {
-    margin-top: 50px;
-}
-.second-img {
-    float: left;
-    margin-right: 50px;
-    margin-bottom: 40px;
-}
 aside section ul {
     list-style-type: square;
 }
@@ -112,6 +93,12 @@ aside a {
     text-decoration: none;
     color: rgb(0, 153, 0);
 }
-blockquote {
-    font-family: Georgia, serif;
+
+.third {
+    margin-top: 50px;
+}
+.second-img {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 40px;
 }
