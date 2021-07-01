@@ -10,7 +10,7 @@ body {
     border-top-right-radius: 8px;
     margin: 0 0 0 auto;
     padding: 10px;
-    width: fit-content;
+    width: -moz-fit-content;
 }
 .benefits {
     max-width: 800px;

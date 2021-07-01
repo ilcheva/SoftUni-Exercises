@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.main-nav {
+    background: #184468;
+    padding: 10px 120px;
+}
+.main-nav .logo-and-cta,
+.main-nav .navigation {
+    display: inline-block;
+    vertical-align: middle;
+}
+.main-nav .logo-and-cta {
+    width: 67%;
+}
+.logo-and-cta img {
+    width: 100%;
+    max-width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.navigation-list-item {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    color: #809bad;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.btn {
+    background-color: #ff9c00;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 18px;
+    border: none;
+    font-weight: bold;
+}
+.secondary-nav {
+    padding: 10px 120px;
+}
+.secondary-nav-list {
+    padding: 0;
+}
+.secondary-nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.secondary-nav-list-item a {
+    text-decoration: none;
+    color: #ff9c00;
+    font-weight: 500;
+}
+.secondary-nav-list-item.active a {
+    color: #809bad;
+}
+.secondary-nav-list-item.active::after {
+    background: #809bad;
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    bottom: -9px;
+}
