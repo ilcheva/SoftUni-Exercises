@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    background: rgb(238, 238, 238);
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+.title {
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+main {
+    padding: 20px;
+    flex: 1 0 auto;
+}
+footer {
+    padding: 20px;
+}
+header {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+}
+footer {
+    flex-shrink: 0;
+    background: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+}
