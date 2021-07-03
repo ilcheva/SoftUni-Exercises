@@ -1,0 +1,88 @@
+@import url(https://use.fontawesome.com/releases/v5.15.3/css/all.css);
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+main {
+    max-width: 400px;
+    margin: 100px auto;
+    position: relative;
+}
+h3,
+form {
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px 0px lightgray;
+}
+
+h3 {
+    background: #f8f8f8;
+    padding: 12px;
+    font-weight: 400;
+    border: 1px solid black;
+    border-radius: 4px;
+    top: -45px;
+    position: absolute;
+    padding-right: 80px;
+}
+form {
+    padding: 50px 20px 20px 20px;
+    background: #f8f8f8;
+}
+label {
+    width: 100%;
+    position: relative;
+}
+
+.form-row {
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.label-text {
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+input {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 6px 10px 6px 30px;
+    width: 100%;
+}
+label i {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+.btn {
+    background: #2d2d2d;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: 9px 15px;
+    margin-top: 20px;
+}
+@media all and (max-width: 700px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .label-text {
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (max-width: 430px) {
+    main {
+        margin: 100px 20px;
+    }
+}

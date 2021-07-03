@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+body {
+    background-color: #eeeeee;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    padding: 20px 130px;
+}
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+p,
+blockquote,
+a {
+    font-size: 0.7em;
+}
+.site-title {
+    font-size: 40px;
+    text-transform: uppercase;
+
+    font-weight: bold;
+}
+
+.site-header {
+    flex-basis: 100%;
+    border-bottom: 2px solid black;
+}
+img {
+    padding: 5px;
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.25);
+}
+.blockquote{
+    display: flex;
+}
+
+.quote {
+    font-family: Georgia, serif;
+    border-left: 3px solid lightgray;
+    padding-left: 20px;
+    font-style: italic;
+    color: #757171;
+}
+figcaption {
+    text-align: right;
+}
+
+.first-img {
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+main,
+aside {
+    display: flex;
+}
+/* main {
+    width: 73%;
+    margin-right: 65px;
+    flex-wrap: wrap;
+}
+aside {
+    flex-direction: column;
+} */
+/* aside section ul {
+    list-style-type: square;
+}
+aside a {
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+} */
+
+.third {
+    margin-top: 50px;
+}
+.second-img {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}

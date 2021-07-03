@@ -1,0 +1,92 @@
+@import url(https://use.fontawesome.com/releases/v5.15.3/css/all.css);
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+    font-family: Helvetica, sans-serif;
+}
+ul {
+    padding-left: 0;
+}
+h1 {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+nav {
+    border-bottom: 1px solid black;
+    margin: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    display: flex;
+    background: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+ul li {
+    list-style: none;
+    margin: 10px;
+    background: #2d2d2d;
+    border-radius: 4px;
+    padding: 8px;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+.close-menu {
+    display: none;
+    align-self: center;
+}
+
+@media all and (max-width: 780px) {
+    nav,
+    ul {
+        flex-direction: column;
+    }
+    nav {
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    .close-menu {
+        display: block;
+    }
+    ul {
+        position: relative;
+    }
+    ul::before,
+    ul::after {
+        width: 100%;
+        content: "";
+        height: 2px;
+        background: black;
+        position: absolute;
+        left: 0;
+    }
+
+    ul::before {
+        top: 0;
+    }
+    ul::after {
+        bottom: 0;
+    }
+    h1 {
+        padding-left: 30px;
+    }
+    ul {
+        width: 100%;
+    }
+}
+@media all and (max-width: 500px) {
+    nav {
+        align-items: center;
+    }
+    h1 {
+        padding-left: 0;
+    }
+}
