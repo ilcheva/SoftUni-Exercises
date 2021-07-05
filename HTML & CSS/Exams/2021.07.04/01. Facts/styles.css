@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+
+div {
+    background-color: #252525;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+}
+.fact {
+    margin: 40px;
+}
+.fact-icon,
+.fact-text {
+    color: #d49a07;
+    text-align: center;
+}
+
+.fact-text {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.fact-number {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
