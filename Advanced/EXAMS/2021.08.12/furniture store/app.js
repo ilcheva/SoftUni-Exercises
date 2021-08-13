@@ -52,6 +52,8 @@ function solve() {
             e.currentTarget.parentElement.parentElement.remove();
         });
         btnMore.addEventListener("click", (e) => {
+
+            /// DO NOT USE InnerHTML!!!!
             newTrDesc.innerHTML = `<td>Year: ${year}</td>\n<td colspan ="3">Description: ${description}</td>`;
 
             if (e.currentTarget.textContent == "More info") {
