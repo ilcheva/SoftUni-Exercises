@@ -1,0 +1,41 @@
+html {
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+body {
+    padding: 0 100px;
+}
+.movie-item {
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+li {
+    list-style-type: none;
+}
+.movie-item:hover {
+    background-color: aqua;
+    display: inline-block;
+    padding: 5px;
+}
+.add-movie {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 150px;
+}
+.login-form {
+    padding: 20px;
+}
+label {
+    padding: 5px;
+}
+#add-movie-button {
+    display: inline-block;
+    margin: 10px 150px;
+    padding: 5px 0;
+    border-radius: 5px;
+}
