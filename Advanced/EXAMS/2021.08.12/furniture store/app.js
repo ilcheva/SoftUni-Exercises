@@ -2,7 +2,7 @@ window.addEventListener("load", solve);
 
 function solve() {
     let allInputElements = Array.from(document.querySelectorAll("input"));
-    console.log(allInputElements);
+
     let [modelInput, yearInput, priceInput] = allInputElements;
     let descriptionInput = document.querySelector("textarea");
     let addButton = document.getElementById("add");
@@ -44,6 +44,9 @@ function solve() {
         let newTdBtn = document.createElement("td");
         let newTrDesc = document.createElement("tr");
         newTrDesc.classList.add("hide");
+        newTrDesc.style.display = "none";
+
+
         btnBuy.addEventListener("click", (e) => {
             totalPrice += price;
             totalPriceElement.textContent = totalPrice;
