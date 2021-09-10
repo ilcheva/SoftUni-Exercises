@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <div id="root"></div>
+
+    <a href="#" onclick="navigate(event, 'home');">home</a>
+    <a href="#" onclick="navigate(event, 'about');">about</a>
+    <a href="#" onclick="navigate(event, 'contact');">contact</a>
+
+    <button id="change">Change</button>
+
+    <script>
+        const rootElement = document.getElementById('root');
+        
+        const router = {
+            '/home': (name) => `<h2>${name}</h2>`,
+            '/about': `<h2>About us something...</h2>`,
+            '/contact': `<h2>Our contacts</h2>`,
+            '/changed': `<h2>changed</h2>`,
+        };
+
+        async function fetchNames(id) {
+            let result = await fetch(`https://swapi.dev/api/people/${id}/`);
+            let character = await result.json();
+
+            return character.name;
+        };
+
+        window.addEventListener('popstate', e => {
+            console.log('popstate');
+
+            fetchNames(4)
+                .then(name => {
+                    rootElement.innerHTML = router[location.pathname](name) || `<h2>Not Found</h2>`;
+                })
+
+        });
+
+        function navigate(e, url) {
+            e && e.preventDefault();
+            
+            history.pushState({}, '', url);
+
+            let event = new CustomEvent('popstate', {
+                state: {},
+                title: '',
+                url,
+            });
+
+            window.dispatchEvent(event);
+        }
+
+        document.getElementById('change').addEventListener('click', () => {
+            navigate(null, 'changed');
+        });
+    </script>
+</body>
+</html>
