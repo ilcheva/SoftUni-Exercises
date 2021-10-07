@@ -5,7 +5,8 @@ const htmlSelectors = {
     'createAuthorInput': () => document.getElementById('create-author'),
     'createIsbnInput': () => document.getElementById('create-isbn'),
     'booksContainer': () => document.querySelector('table > tbody'),
-    'errorContainer': () => document.getElementById('error-notification')
+    'errorContainer': () => document.getElementById('error-notification'),
+    'editBtn': () => document.querySelector('#edit-form > button')
 }
 htmlSelectors['loadBooks']()
     .addEventListener('click', fetchAllBooks)
@@ -36,7 +37,7 @@ function renderBooks(booksData) {
                 createDOMElement('td', author, {}, {}),
                 createDOMElement('td', isbn, {}, {}),
                 createDOMElement('td', '', {}, {},
-                    createDOMElement('button', 'Edit', {}, {}),
+                    createDOMElement('button', 'Edit', { 'data-key': bookId }, { click: loadBookById }),
                     createDOMElement('button', 'Delete', {}, {})));
 
             booksContainer.appendChild(tableRow)
@@ -44,12 +45,12 @@ function renderBooks(booksData) {
 }
 
 function createBook(e) {
-    e.preventDefault()
+    e.preventDefault();
     const titleInput = htmlSelectors['createTitleInput']();
     const authorInput = htmlSelectors['createAuthorInput']();
     const isbnInput = htmlSelectors['createIsbnInput']();
 
-    if (titleInput.value !== '' && authorInput.value !== '' && isbn.value !== '') {
+    if (titleInput.value !== '' && authorInput.value !== '' && isbnInput.value !== '') {
         const initObj = {
             method: 'POST',
             headers: {
@@ -60,8 +61,29 @@ function createBook(e) {
         fetch('https://books-exersice-default-rtdb.europe-west1.firebasedatabase.app/Books/.json', initObj)
             .then(fetchAllBooks)
             .catch(handleError)
+
+        titleInput.value = '';
+        authorInput.value = '';
+        isbnInput.value = '';
+    } else {
+        const error = { message: '' };
+        if (titleInput.value === '') {
+            error.message += 'What\'s the title? '
+        }
+        if (authorInput.value === '') {
+            error.message += 'What\'s the author? '
+        }
+        if (isbnInput.value === '') {
+            error.message += 'What\'s the ISBN? '
+        }
+        handleError(error);
     }
 
+}
+
+function loadBookById() {
+    const id = this.getAttribute('data-key')
+    console.log(id);
 }
 
 function handleError(err) {
@@ -87,7 +109,7 @@ function createDOMElement(type, text, attributes, events, ...children) {
 
     Object.entries(events)
         .forEach(([eventName, eventHandler]) => {
-            domElement.addEventLister(eventName, eventHandler)
+            domElement.addEventListener(eventName, eventHandler)
         })
 
     children.forEach((child) => {
