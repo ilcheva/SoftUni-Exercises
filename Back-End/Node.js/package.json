@@ -11,6 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "formidable": "^1.2.2",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.13"
   }
 }

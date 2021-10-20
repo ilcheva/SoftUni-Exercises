@@ -6,7 +6,10 @@ const htmlSelectors = {
     'createIsbnInput': () => document.getElementById('create-isbn'),
     'booksContainer': () => document.querySelector('table > tbody'),
     'errorContainer': () => document.getElementById('error-notification'),
-    'editBtn': () => document.querySelector('#edit-form > button')
+    'editBtn': () => document.querySelector('#edit-form > button'),
+    'editTitleInput': () => document.getElementById('edit-title'),
+    'editAuthorInput': () => document.getElementById('edit-author'),
+    'editIsbnInput': () => document.getElementById('edit-isbn'),
 }
 htmlSelectors['loadBooks']()
     .addEventListener('click', fetchAllBooks)
