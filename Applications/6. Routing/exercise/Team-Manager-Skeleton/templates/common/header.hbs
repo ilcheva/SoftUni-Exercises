@@ -2,17 +2,17 @@
     <div>
         <h1>Team Manager</h1>
         {{#if loggedIn}}
-            <span>Welcome, {{username}}</span>
+            <span>Welcome, {{email}}</span>
         {{/if}}
         <nav>
-            <a href="/home" class="btn btn-default">Home</a>
-            <a href="/about" class="btn btn-default">About</a>
+            <a href="/home" class="btn btn-outline-primary">Home</a>
+            <a href="/about" class="btn btn-outline-primary">About</a>
             {{#if loggedIn}}
-                <a href="/catalog" class="btn btn-default">Catalog</a>
-                <a href="/logout" class="btn btn-default">Logout</a>
+                <a href="/catalog" class="btn btn-outline-primary">Catalog</a>
+                <a href="/logout" class="btn btn-outline-primary">Logout</a>
             {{else}}
-                <a href="/login" class="btn btn-default">Login</a>
-                <a href="/register" class="btn btn-default">Register</a>
+                <a href="/login" class="btn btn-outline-primary">Login</a>
+                <a href="/register" class="btn btn-outline-primary">Register</a>
             {{/if}}
         </nav>
     </div>
