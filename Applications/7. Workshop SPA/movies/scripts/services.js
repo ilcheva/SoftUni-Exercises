@@ -1,5 +1,5 @@
 
-const apiKey = 'AIzaSyDjowGNcWnSTDK6pmqMZknJJ1CkyxTi74w';
+import apiKey from '../apiKey.js';
 
 const authService = {
     async login(email, password) {

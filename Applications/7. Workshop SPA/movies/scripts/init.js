@@ -9,9 +9,8 @@ function navigateHandler(e) {
             return
         }
         let url = new URL(e.target.href)
-        console.log(url.pathname.slice(1));
-        history.pushState({}, '', url.pathname);
-        router(url.pathname.slice(1))
+
+        navigate(url.pathname.slice(1))
     }
 }
 
@@ -22,6 +21,9 @@ function onLoginSubmit(e) {
     let email = formData.get('email');
     let password = formData.get('password');
 
-    authService.login(email, password);
+    authService.login(email, password)
+        .then(data => {
+            navigate('/')
+        })
 }
 addEventListeners()
