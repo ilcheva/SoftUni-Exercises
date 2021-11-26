@@ -1,5 +1,10 @@
+
+
 function addEventListeners() {
-    document.querySelector('.navigation').addEventListener('click', navigateHandler)
+    let navigationTemplate = Handlebars.compile(document.getElementById('navigation-template').innerHTML)
+    Handlebars.registerPartial('navigation-template', navigationTemplate)
+    navigate('home')
+    
 }
 
 function navigateHandler(e) {
@@ -23,7 +28,7 @@ function onLoginSubmit(e) {
 
     authService.login(email, password)
         .then(data => {
-            navigate('/')
+            navigate('home')
         })
 }
 addEventListeners()

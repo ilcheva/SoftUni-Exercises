@@ -12,31 +12,13 @@
             crossorigin="anonymous"
         />
         <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
-        <script src="scripts/script.js" defer></script>
         <script src="scripts/services.js"></script>
+        <script src="scripts/router.js" defer></script>
         <script src="scripts/init.js" defer></script>
     </head>
 
     <body>
         <div class="container" id="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand text-light" href="#">Movies</a>
-                <ul class="navbar-nav ml-auto navigation">
-                    <li class="nav-item">
-                        <a class="nav-link">Welcome, email</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
-                    </li>
-                </ul>
-            </nav>
-
             <div id="app"></div>
             <section class="notifications" style="display: none">
                 <p class="notification-message" id="errorBox">Message...</p>
@@ -234,7 +216,37 @@
                 </div>
             </footer>
         </div>
+        <script type="text/x-handlebars-template" id="navigation-template">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-dark"
+                onclick="navigateHandler(event)"
+            >
+                <a
+                    class="navbar-brand text-light nav-link"
+                    href="/home"
+                >Movies</a>
+                <ul class="navbar-nav ml-auto">
+                    {{#if isAuthenticated}}
+                        <li class="nav-item">
+                            <a class="nav-link">Welcome, {{email}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                    {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </script>
+
         <script type="text/x-handlebars-template" id="login-form-template">
+            {{>navigation-template}}
             <form
                 id="login"
                 class="text-center border border-light p-5"
@@ -264,8 +276,9 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>
         </script>
-        
+
         <script type="text/x-handlebars-template" id="register-form-template">
+            {{>navigation-template}}
             <form
                 class="text-center border border-light p-5"
                 action="#"
@@ -310,6 +323,7 @@
         </script>
 
         <script type="text/x-handlebars-template" id="home-template">
+            {{>navigation-template}}
             <div
                 class="jumbotron jumbotron-fluid text-light"
                 style="background-color: #343a40"
