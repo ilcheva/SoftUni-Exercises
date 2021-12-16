@@ -1,0 +1,19 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Harry Potter",
+            "description": "wizards and stuff"
+        },
+        {
+            "id": 2,
+            "title": "Programming with Js",
+            "description": "Guide to programming"
+        },
+        {
+            "id": 3,
+            "title": "Klara and the Sun",
+            "description": "androids with dreams"
+        }
+    ]
+}

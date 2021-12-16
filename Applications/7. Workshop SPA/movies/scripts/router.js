@@ -2,11 +2,15 @@ const routes = {
     'home': 'home-template',
     'login': 'login-form-template',
     'register': 'register-form-template',
-
+    'add-movie': 'add-movie-template'
 }
-const router = (path) => {
-    let app = document.getElementById('app')
+const router = async(path) => {
+    let app = document.getElementById('app');
+    let templateData = authService.getData();
     switch (path) {
+        case 'home':
+            templateData.movies = await movieService.getAll()
+            break;
         case 'logout': authService.logout()
             return navigate('home');
         default:
@@ -17,9 +21,9 @@ const router = (path) => {
 
     let template = Handlebars.compile(document.getElementById(routes[path]).innerHTML);
 
-    let authData = authService.getData()
 
-    app.innerHTML = template(authData);
+
+    app.innerHTML = template(templateData);
 }
 
 const navigate = (path) => {
