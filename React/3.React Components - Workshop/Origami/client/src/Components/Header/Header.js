@@ -6,8 +6,10 @@ const Header = () => {
     return (
         <nav className={style.navigation}>
             <ul>
-                <li className={navStyle.listItem}><img src="/white-origami-bird.png" alt="white origami bird" /></li>
-                             
+                {/* <li className={navStyle.listItem}> */}
+                <img src="/white-origami-bird.png" alt="white origami bird" />
+                {/* </li> */}
+
                 <NavigationItem>Going to 1</NavigationItem>
                 <NavigationItem>Going to 2</NavigationItem>
                 <NavigationItem>Going to 3</NavigationItem>
