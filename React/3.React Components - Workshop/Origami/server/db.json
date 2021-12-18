@@ -2,15 +2,18 @@
     "posts": [
         {
             "id": 1,
-            "content": "some content here",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eum recusandae, quas soluta voluptas dignissimos alias voluptatum vitae enim et. Iure, animi ab saepe officiis corporis nisi earum quod dolorem.",
             "author": "Pesho"
-
         },
         {
             "id": 2,
-            "content": "some content here2",
-            "author": "Pesho2"
-
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eum recusandae, quas soluta voluptas dignissimos alias voluptatum vitae enim et. Iure, animi ab saepe officiis corporis nisi earum quod dolorem.",
+            "author": "Stamat"
+        },
+        {
+            "id": 3,
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eum recusandae, quas soluta voluptas dignissimos alias voluptatum vitae enim et. Iure, animi ab saepe officiis corporis nisi earum quod dolorem.",
+            "author": "Ivan"
         }
     ]
 }
