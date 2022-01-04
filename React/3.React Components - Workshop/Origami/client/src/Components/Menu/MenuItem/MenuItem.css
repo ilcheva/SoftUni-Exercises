@@ -1,4 +1,4 @@
-.menuItem {
+.menu-item {
     display: block;
     width: 98%;
     border-left: 2px solid #234465;
@@ -7,7 +7,7 @@
     height: 5vh;
     text-align: center;
 }
-.menuItemLink {
+.menu-item a {
     color: #234465;
     text-align: center;
     text-decoration: none;
@@ -16,11 +16,14 @@
     display: block;
 }
 
-.menuItem:hover {
+.menu-item:hover {
     border-left: none;
     border-right: none;
     font-weight: bold;
     border-top: 2px solid #234465;
     border-bottom: 2px solid #234465;
     color: #ffa000;
+}
+.menu-item-selected {
+    background-color: lightcoral;
 }

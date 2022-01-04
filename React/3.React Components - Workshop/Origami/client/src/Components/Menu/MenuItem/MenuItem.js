@@ -1,12 +1,21 @@
 
-import style from './MenuItem.module.css';
+import './MenuItem.css';
 
 const MenuItem = ({
+    id,
+    onClick,
+    isSelected,
     children
 }) => {
+    let classes = ["menu-item"];
+
+    if (isSelected) {
+        classes.push("menu-item-selected")
+    }
     return (
-        <li className={style.menuItem}>
-            <a href="#" className={style.menuItemLink}>
+        <li className={classes.join(' ')} >
+            {/* <a href="#" className={style.menuItemLink} onClick={() => onClick(id)}> */}
+            <a href="#" onClick={() => onClick(id)}>
                 {children}
             </a>
         </li>
