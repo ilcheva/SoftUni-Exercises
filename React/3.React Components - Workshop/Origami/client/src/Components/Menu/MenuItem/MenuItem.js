@@ -13,8 +13,7 @@ const MenuItem = ({
         classes.push("menu-item-selected")
     }
     return (
-        <li className={classes.join(' ')} >
-            {/* <a href="#" className={style.menuItemLink} onClick={() => onClick(id)}> */}
+        <li className={classes.join(' ')} >            
             <a href="#" onClick={() => onClick(id)}>
                 {children}
             </a>

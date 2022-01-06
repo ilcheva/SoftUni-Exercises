@@ -1,6 +1,6 @@
 export const MENU_ITEMS = [
     { id: 1, text: 'Going to 1', unid: 'hg' },
-    { id: 2, text: 'Going to 1', unid: 'hgf' },
+    { id: 2, text: 'Going to 2', unid: 'hgf' },
     { id: 3, text: 'Going to 3', unid: 'ger' },
     { id: 4, text: 'Going to 4', unid: 'kiu' },
     { id: 5, text: 'Going to 5', unid: 'ku' },

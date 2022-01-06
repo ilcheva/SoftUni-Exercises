@@ -15,7 +15,8 @@ class App extends Component {
         super(props)
 
         this.state = {
-            posts: []
+            posts: [],
+            selectedPost: null,
         }
     }
     componentDidMount() {
@@ -24,14 +25,29 @@ class App extends Component {
                 this.setState({ posts })
             })
     }
+    onMenuItemClick(id) {
+        this.setState({ selectedPost: id })
+    }
+    getPosts() {
+        if (!this.state.selectedPost) {
+            return this.state.posts
+        } else {
+            return [this.state.posts.find(x => x.id === this.state.selectedPost)]
+        }
+    }
 
     render() {
         return (
             <div className={style.app}>
                 <Header />
                 <div className={style.container}>
-                    <Menu />
-                    <Main posts={this.state.posts} />
+                    <Menu
+                        onMenuItemClick={this.onMenuItemClick.bind(this)}
+                    />
+                    <Main
+                        posts={this.getPosts()}
+
+                    />
                 </div>
                 <Footer />
             </div>

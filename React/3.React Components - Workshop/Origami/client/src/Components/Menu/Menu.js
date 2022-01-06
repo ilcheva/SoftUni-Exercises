@@ -2,9 +2,14 @@ import { useState } from 'react';
 import MenuItem from './MenuItem'
 import './Menu.css';
 import { MENU_ITEMS } from './MenuItem/MenuConstants';
-const Menu = () => {
+const Menu = ({
+    onMenuItemClick
+}) => {
     const [currentItem, setCurrentItem] = useState()
-    console.log(currentItem);
+    const menuItemClickHandler = (id) => {
+        setCurrentItem(id)
+        onMenuItemClick(id)
+    }
     return (
         <aside>
             {MENU_ITEMS.map(x =>
@@ -12,8 +17,8 @@ const Menu = () => {
                 <MenuItem
                     key={x.unid}
                     id={x.id}
-                    onClick={setCurrentItem}
                     isSelected={x.id === currentItem}
+                    onClick={menuItemClickHandler}
                 >
                     {x.text}
                 </MenuItem>
