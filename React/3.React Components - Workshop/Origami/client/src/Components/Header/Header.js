@@ -1,7 +1,7 @@
 import style from './Header.module.css'
 import NavigationItem from './NavigationItem/NavigationItem';
 import navStyle from './NavigationItem/NavigationItem.module.css'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <nav className={style.navigation}>
@@ -23,6 +23,7 @@ const Header = () => {
                 <NavigationItem>Going to 9</NavigationItem>
                 <NavigationItem>Going to 10</NavigationItem>
                 <NavigationItem>Going to 11</NavigationItem>
+                <Link to='/about'>About</Link>
             </ul>
         </nav>
     )

@@ -7,6 +7,8 @@ import Header from './Components/Header';
 import Menu from './Components/Menu';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
+import About from './Components/About';
+import ContactUs from './Components/ContactUs';
 import style from './App.module.css';
 
 
@@ -41,13 +43,14 @@ class App extends Component {
             <div className={style.app}>
                 <Header />
                 <div className={style.container}>
-                    <Menu
-                        onMenuItemClick={this.onMenuItemClick.bind(this)}
-                    />
-                    <Main
-                        posts={this.getPosts()}
-
-                    />
+                    <Menu onMenuItemClick={this.onMenuItemClick.bind(this)} />
+                    <Switch>
+                        <Route path="/" exact>
+                            <Main posts={this.getPosts()} />
+                        </Route>
+                        <Route path="/about" component={About} />
+                        <Route path="/contact-us" component={ContactUs} />
+                    </Switch>
                 </div>
                 <Footer />
             </div>
