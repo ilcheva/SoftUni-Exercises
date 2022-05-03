@@ -12,19 +12,39 @@ export const getOne = (petId) => {
         .catch(e => console.log(e))
 }
 export const create = (petName, description, imageURL, category) => {
-    let pet= {
+    let pet = {
         name: petName,
         description,
         imageURL,
-        category
+        category,
+        likes: 0
     }
-    
-    
-    return fetch(url,{
+
+
+    return fetch(url, {
         method: 'POST',
-        headers:{
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(pet)
+    })
+}
+export const update = (petId, pet) => {
+    return fetch(`${url}/${petId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pet)
+    })
+}
+
+export const pet = (petId, likes) =>{
+    return fetch(`${url}/${petId}`,{
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({likes})
     })
 }

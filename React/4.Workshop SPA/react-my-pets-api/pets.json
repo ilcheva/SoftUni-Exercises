@@ -107,10 +107,11 @@
     },
     {
       "name": "murlina",
-      "description": "ndsfpldskfvds",
+      "description": "Some cute cat ",
       "imageURL": "https://images.unsplash.com/photo-1615497001839-b0a0eac3274c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80",
       "category": "Cat",
-      "id": "XONUAvn"
+      "id": "XONUAvn",
+      "likes": 7
     }
   ]
 }
